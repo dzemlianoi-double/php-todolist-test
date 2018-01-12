@@ -8,7 +8,6 @@
   box-shadow: 0 0 10px gray;
 }
 
-
 .todolist{
   background-color: #b9c5ff;
   min-height: 235px;
@@ -17,6 +16,7 @@
   margin-top: 200px;
   margin: auto;
   border: 2px solid #91a4ff;
+  margin-bottom: 100px;
 }
 
 .todolists_wrapper{

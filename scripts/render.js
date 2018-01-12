@@ -95,6 +95,7 @@ var render = {
     var wright_tasks_list = todolist_block.appendChild(div_wright_task);
     wright_tasks_list.classList.add("tasks-list");
     var wright_tasks_input = document.createElement("input");
+    wright_tasks_input.setAttribute("id", "value_todo_task");
     wright_tasks_input.setAttribute("placeholder", "What needs to be done?");
     var add_input_and_wright_task = wright_tasks_list.appendChild(wright_tasks_input);
     add_input_and_wright_task.classList.add("input-wright-task-list");
@@ -109,6 +110,7 @@ var render = {
     var save_task_onlist = todolist_block.appendChild(div_save_task);
     save_task_onlist.classList.add("save-task-list");
     var div_added_task = document.createElement("div");
+    div_added_task.setAttribute("id", "window_to_show_tasks");
     var ul_added_task = document.createElement("ul");
     var li_added_task = document.createElement("li");
     var li_add_in_ul = ul_added_task.appendChild(li_added_task);
@@ -122,6 +124,16 @@ var render = {
     task_count_list.classList.add("task-count-list");
 
     document.getElementsByClassName("todolists_wrapper")[0].append(todolist_block);
+  },
+
+  btnAddInTodoListTask: function(){
+    var value_input_in_todo_task = document.getElementById("value_todo_task");
+    var div_where_will_add_tasks = document.getElementById("window_to_show_tasks");
+    if (value_input_in_todo_task.value != "") {
+      var li_added_task_in_todo = document.createElement("li");
+      var create_li_in_div = div_where_will_add_tasks.appendChild(li_added_task_in_todo);
+      li_added_task_in_todo.innerText = value_input_in_todo_task.value;
+    }
   },
 
   setErrors: function(errors, element) {
