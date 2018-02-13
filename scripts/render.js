@@ -1,13 +1,11 @@
 var render = {
   clickRegister: function() {
-    document.getElementById('banner').classList.add('hidden');
     document.getElementById('authorization').classList.add('hidden');
     document.getElementById('authorize').classList.remove('active');
     document.getElementById('registration').classList.remove('hidden');
     document.getElementById('register_link').classList.add('active');
   },
   clickLogin: function() {
-    document.getElementById('banner').classList.add('hidden');
     document.getElementById('registration').classList.add('hidden');
     document.getElementById('register_link').classList.remove('active');
     document.getElementById('authorization').classList.remove('hidden');
@@ -56,23 +54,6 @@ var render = {
     document.getElementById('exit').classList.add("hidden");
     document.getElementById('authorize').classList.remove("hidden");
     document.getElementById('register_link').classList.remove("hidden");
-  },
-
-  showAuthorized: function(){
-    document.getElementsByClassName('todolists')[0].classList.remove("hidden");
-    document.getElementsByClassName('authentication')[0].classList.add("hidden");
-    render.showMenuAuthorized();
-    render.showTodoLists();
-  },
-
-  showTodoLists: function(){
-
-  },
-
-  showGuest: function(){
-    document.getElementsByClassName('todolists')[0].classList.add("hidden");
-    document.getElementsByClassName('authentication')[0].classList.remove("hidden");
-    render.showMenuNotAuthorized();
   },
 
   hideBanner: function(){
