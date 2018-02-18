@@ -1,4 +1,5 @@
 <?php include_once 'engines/flashes.php'; ?>
+<?php include_once 'engines/todolist/select.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,11 +19,19 @@
       <?php setFlash() ?>
       <section class="todolists">
         <h1>GrowUp Todo</h1>
-        <button type="button" class="add-todolist">
-          <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-          Add new todo
-        </button>
-        <div class="todolists_wrapper"></div>
+        <div class="todolists_wrapper">
+          <?php
+            foreach(selectTodolists() as $todolist){
+              include 'partials/todolist/_todolist.php';
+            }
+          ?>
+        </div>
+        <form action="engines/todolist/create.php" method="post">
+          <button type="submit" class="add-todolist">
+            <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
+            Add new todo
+          </button>
+        </form>
       </section>
     </main>
     <footer></footer>
