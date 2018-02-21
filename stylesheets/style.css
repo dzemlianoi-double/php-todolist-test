@@ -112,3 +112,23 @@ nav span:hover{
 .action:hover{
   cursor: pointer;
 }
+
+.edition-buttons-task {
+  width: 200px;
+  height: 34px;
+  position: absolute;
+  left: 750px;
+  padding-top: 13px;
+}
+
+div.edition-buttons-task button, div.edition-buttons-todolist button {
+  margin-right: 20px;
+}
+
+.edition-buttons-todolist {
+  width: 150px;
+  height: 34px;
+  position: relative;
+  left: 450px;
+  bottom: 30px;
+}

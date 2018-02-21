@@ -99,3 +99,8 @@
   float: left;
   margin-left: 20px;
 }
+
+.check {
+  float: left;
+  margin: 25px 10px 0;
+}
